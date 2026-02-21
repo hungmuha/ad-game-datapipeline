@@ -1,0 +1,23 @@
+# Web scraping with network interception
+selenium-wire>=5.1.0
+selenium>=4.0.0  # Fixed: 4.15.0 doesn't exist, changed to 4.0.0
+blinker<1.8.0  # Pin blinker to version compatible with selenium-wire (_saferef removed in 1.8.0+)
+
+# WebDriver management
+webdriver-manager>=4.0.1
+
+# Data processing and export
+pandas>=2.1.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# Logging utilities
+coloredlogs>=15.0.1
+
+# Additional utilities
+requests>=2.31.0
+setuptools>=65.0.0  # Required for pkg_resources (used by selenium-wire's bundled mitmproxy)

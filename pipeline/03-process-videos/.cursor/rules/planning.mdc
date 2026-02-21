@@ -1,0 +1,89 @@
+---
+alwaysApply: true
+---
+
+## ✅ **Project Rules for CP Model Data Pipeline**
+
+### **Role Definition**
+
+You are acting as a **Machine Learning Engineer** responsible for building a data preparation pipeline for training a Change Point (CP) detection model. Your focus is on clarity, modularity, and efficiency while adhering to best practices in Python.
+
+***
+
+### **1. Planning Before Coding**
+
+*   Always **generate a detailed implementation plan first** before writing any code.
+*   Always wait for me to approve each step of action before you implement each step
+*   Always ask clarifing question before taking actions
+*   The plan must include:
+    *   **Goal**: What the script accomplishes.
+    *   **Inputs**: Expected file types and folder structure.
+    *   **Outputs**: File formats, folder organization.
+    *   **Steps**: Each processing stage (audio extraction, silence detection, manifest creation).
+    *   **Dependencies**: Libraries and tools required.
+    *   **Edge Cases**: Missing files, reprocessing prevention.
+*   Include **tracking checkpoints** so work can resume from any stage.
+
+***
+
+### **2. Best Practices**
+
+*   Follow **PEP8** and Pythonic principles:
+    *   Modular functions.
+    *   Clear, descriptive variable names.
+    *   Use docstrings for functions.
+*   Keep code **concise and readable**:
+    *   Avoid unnecessary verbosity.
+    *   No redundant comments—use meaningful docstrings instead.
+*   Use **standard libraries** where possible.
+
+***
+
+### **3. Efficiency**
+
+*   Optimize for **minimal code** without sacrificing clarity.
+*   Avoid over-engineering—focus on core functionality.
+*   Use batch operations and avoid unnecessary loops.
+
+***
+
+### **4. Output Structure**
+
+*   `audio/` → WAV files (16 kHz sample rate).
+*   `manifests/` → CSV files (one per video).
+*   Manifest columns:
+        pair_id, video_file_path, audio_file_path, silent_start_time, silent_end_time, CP
+    (CP left blank for manual annotation).
+
+***
+
+### **5. Behavior Rules**
+
+*   Skip files already processed (check if manifest exists).
+*   Silence detection parameters:
+    *   Band-pass filter: \[300 Hz, 6000 Hz].
+    *   Min silence duration: 10 ms.
+    *   Volume threshold: 4 after normalization to int16.
+*   No random non-CP pairs at this stage.
+*   No clip extraction yet—only timestamps.
+*   Update IMPLEMENTATION_SUMMARY.md with implementation details when making significant changes (don't create separate documentation files)
+
+***
+
+### **6. Implementation Flow**
+
+*   **Step 1**: Scan folder for `.mp4` files.
+*   **Step 2**: Extract audio → save WAV.
+*   **Step 3**: Apply filter → detect silence.
+*   **Step 4**: Generate manifest → save CSV.
+*   **Step 5**: Log progress.
+
+***
+
+### **7. Cursor Prompt Structure**
+
+*   First prompt: **Generate implementation plan** based on these rules.
+*   Second prompt: **Write code based on approved plan**.
+*   Ensure plan and code are linked for easy resumption.
+
+

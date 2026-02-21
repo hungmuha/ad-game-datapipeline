@@ -1,0 +1,19 @@
+[project]
+name = "cp-detection-pipeline"
+version = "1.0.0"
+description = "CP Detection Data Pipeline for processing NFL game videos"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pydub>=0.25.1",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "opencv-python>=4.6.0",
+]
+
+[project.scripts]
+process-videos = "process_videos:main"
+
+
+

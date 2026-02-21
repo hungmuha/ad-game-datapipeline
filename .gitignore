@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+
+# Data (large files)
+data/raw_videos/*.mp4
+data/raw_videos/*.avi
+data/raw_videos/*.mov
+data/processed/*.wav
+data/processed/*.edl
+data/processed/*.csv
+data/short_clips/**/*.mp4
+data/short_clips/**/*.avi
+pretrained/*.pth
+pretrained/*.pt
+pretrained/*.model
+models/*.pth
+models/*.pt
+
+# Keep directory structure
+!data/raw_videos/.gitkeep
+
+# Pipeline reports
+outputs/pipeline_report_*.md
+!data/processed/.gitkeep
+!data/annotations/.gitkeep
+!data/short_clips/ads/.gitkeep
+!data/short_clips/content/.gitkeep
+!pretrained/.gitkeep
+!models/.gitkeep
+
+# Pipeline outputs
+pipeline/01-fubo-scraper/output/
+pipeline/02-download-games/videos/
+pipeline/02-download-games/master.csv
+pipeline/02-download-games/node_modules/
+pipeline/03-process-videos/manifests/
+pipeline/03-process-videos/edl/
+pipeline/03-process-videos/audio/
+
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs and outputs
+logs/
+outputs/*.json
+outputs/*.csv
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Keep .claude directory (project context for Claude Code)
+!.claude/
+!.claude/*.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+data/
+models/
+.claude/
+
