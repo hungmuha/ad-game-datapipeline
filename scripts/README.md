@@ -94,10 +94,10 @@ This directory contains bash scripts to orchestrate the NFL Ad Detection data pi
 ```
 
 **Prerequisites**:
-- Python with venv
+- Python 3.8+ (uses venv for virtual environments)
 - Chrome/Chromium browser
 - `.env` file in `pipeline/01-fubo-scraper/` with Fubo credentials
-- `.env` file need to also have the FUBO_RECORDINGS_URL with the URL
+- `.env` file must also have FUBO_RECORDINGS_URL with the recordings page URL
 
 **Output**:
 - CSV files in `pipeline/01-fubo-scraper/output/`

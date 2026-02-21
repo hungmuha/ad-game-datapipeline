@@ -32,9 +32,9 @@ This system uses a two-stage approach to detect commercial breaks in NFL game br
 git clone <repository-url>
 cd ad-game-explainer
 
-# Create conda environment
-conda create -n ad-detection python=3.8
-conda activate ad-detection
+# Create Python virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
